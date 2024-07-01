@@ -1,0 +1,50 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Persona {
+  ageRange                    String?
+  attitudes                   String?
+  careerPath                  String?
+  challengesAndPainPoints     String?
+  children                    String?
+  communicationChannels       String?
+  competitorProducts          String?
+  completed                   String?
+  createdAt                   DateTime @default(now())
+  culturalAndSocialInfluences String?
+  currentlyPursuing           String?
+  definition                  String?
+  does                        String?
+  familyStatus                String?
+  featureAnalysis             String?
+  feels                       String?
+  gender                      String?
+  generalLifestyle            String?
+  hobbiesAndInterests         String?
+  id                          String   @id @default(cuid())
+  incomeLevel                 String?
+  location                    String?
+  mediaChannels               String?
+  missingFeatures             String?
+  motivationsAndDesires       String?
+  name                        String?
+  needs                       String?
+  occupation                  String?
+  otherHabits                 String?
+  personaAge                  Int?
+  productPreferences          String?
+  satisfactionLevels          String?
+  says                        String?
+  technologyUsage             String?
+  thinks                      String?
+  updatedAt                   DateTime @updatedAt
+  valuedFeatures              String?
+  values                      String?
+  wantsAndGoals               String?
+}
