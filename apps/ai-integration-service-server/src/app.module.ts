@@ -1,5 +1,6 @@
 import { Module } from "@nestjs/common";
 import { AiModelModule } from "./aiModel/aiModel.module";
+import { ConceptAssistantModule } from "./ConceptAssistant/conceptassistant.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -13,6 +14,7 @@ import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
   controllers: [],
   imports: [
     AiModelModule,
+    ConceptAssistantModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,
